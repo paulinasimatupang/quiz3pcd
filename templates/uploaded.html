@@ -1,0 +1,235 @@
+{% extends "layout.html" %} 
+{% block body %}    
+<div class="jumbotron jumbotron-fluid text-center">
+    <h1 class="display-1">Menu</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Umum</h2>
+                <div class="d-flex flex-wrap">
+                    <!-- Form untuk memanggil metode normal() -->
+                    <div class="p-2 flex-fill bd-highlight">
+                        <form id="" action="{{ url_for('normal') }}" method="POST" enctype="multipart/form-data">
+                            <button type="submit" class="btn btn-primary">Normal</button>
+                        </form>
+                    </div>
+                    <!-- Form untuk memanggil metode grayscale() -->
+                    <div class="p-2 flex-fill bd-highlight">
+                        <form id="" action="{{ url_for('grayscale') }}" method="POST" enctype="multipart/form-data">
+                            <button type="submit" class="btn btn-primary">Grayscale</button>
+                        </form>
+                    </div>
+                    <!-- Form untuk memanggil metode zoomin() -->
+                    <div class="p-2 flex-fill bd-highlight">
+                        <form id="" action="{{ url_for('zoomin') }}" method="POST" enctype="multipart/form-data">
+                            <button type="submit" class="btn btn-primary">Zoom In</button>
+                        </form>
+                    </div>
+                    <!-- Form untuk memanggil metode zoomout() -->
+                    <div class="p-2 flex-fill bd-highlight">
+                        <form id="" action="{{ url_for('zoomout') }}" method="POST" enctype="multipart/form-data">
+                            <button type="submit" class="btn btn-primary">Zoom Out</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h2>Pergeseran</h2>
+                <div class="d-flex flex-wrap">
+                    <!-- Form untuk memanggil metode move_left() -->
+                    <div class="p-2 flex-fill bd-highlight">
+                        <form id="" action="{{ url_for('move_left') }}" method="POST" enctype="multipart/form-data">
+                            <button type="submit" class="btn btn-primary">Geser Kiri</button>
+                        </form>
+                    </div>
+                    <!-- Form untuk memanggil metode move_right() -->
+                    <div class="p-2 flex-fill bd-highlight">
+                        <form id="" action="{{ url_for('move_right') }}" method="POST" enctype="multipart/form-data">
+                            <button type="submit" class="btn btn-primary">Geser Kanan</button>
+                        </form>
+                    </div>
+                    <!-- Form untuk memanggil metode move_up() -->
+                    <div class="p-2 flex-fill bd-highlight">
+                        <form id="" action="{{ url_for('move_up') }}" method="POST" enctype="multipart/form-data">
+                            <button type="submit" class="btn btn-primary">Geser Atas</button>
+                        </form>
+                    </div>
+                    <!-- Form untuk memanggil metode move_down() -->
+                    <div class="p-2 flex-fill bd-highlight">
+                        <form id="" action="{{ url_for('move_down') }}" method="POST" enctype="multipart/form-data">
+                            <button type="submit" class="btn btn-primary">Geser Bawah</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h2>Penerangan</h2>
+                <div class="d-flex flex-wrap">
+                    <!-- Form untuk memanggil metode brightness_multiplication() -->
+                    <div class="p-2 flex-fill bd-highlight">
+                        <form id="" action="{{ url_for('brightness_multiplication') }}" method="POST" enctype="multipart/form-data">
+                            <button type="submit" class="btn btn-primary">Terang (*)</button>
+                        </form>
+                    </div>
+                    <!-- Form untuk memanggil metode brightness_division() -->
+                    <div class="p-2 flex-fill bd-highlight">
+                        <form id="" action="{{ url_for('brightness_division') }}" method="POST" enctype="multipart/form-data">
+                            <button type="submit" class="btn btn-primary">Gelap (/)</button>
+                        </form>
+                    </div>
+                    <!-- Form untuk memanggil metode brightness_addition() -->
+                    <div class="p-2 flex-fill bd-highlight">
+                        <form id="" action="{{ url_for('brightness_addition') }}" method="POST" enctype="multipart/form-data">
+                            <button type="submit" class="btn btn-primary">Terang (+)</button>
+                        </form>
+                    </div>
+                    <!-- Form untuk memanggil metode brightness_substraction() -->
+                    <div class="p-2 flex-fill bd-highlight">
+                        <form id="" action="{{ url_for('brightness_substraction') }}" method="POST" enctype="multipart/form-data">
+                            <button type="submit" class="btn btn-primary">Gelap (-)</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h2>Analisis Gambar</h2>
+                <!-- Form untuk memanggil metode histogram_rgb() -->
+                <div class="p-2 flex-fill bd-highlight">
+                    <form id="" action="{{ url_for('histogram_rgb') }}" method="POST" enctype="multipart/form-data">
+                        <button type="submit" class="btn btn-primary">Histogram</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h2>Pemrosesan Gambar</h2>
+                <!-- Form untuk memanggil metode histogram_equalizer() -->
+                <div class="p-2 flex-fill bd-highlight">
+                    <form id="" action="{{ url_for('histogram_equalizer') }}" method="POST" enctype="multipart/form-data">
+                        <button type="submit" class="btn btn-primary">Histogram Equalizer</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h2>Filter Gambar</h2>
+                <!-- Form untuk memanggil metode edge_detection() -->
+                <div class="p-2 flex-fill bd-highlight">
+                    <form id="" action="{{ url_for('edge_detection') }}" method="POST" enctype="multipart/form-data">
+                        <button type="submit" class="btn btn-primary">Edge Detection</button>
+                    </form>
+                </div>
+                <!-- Form untuk memanggil metode blur() -->
+                <div class="p-2 flex-fill bd-highlight">
+                    <form id="" action="{{ url_for('blur') }}" method="POST" enctype="multipart/form-data">
+                        <button type="submit" class="btn btn-primary">Blur</button>
+                    </form>
+                </div>
+                <!-- Form untuk memanggil metode sharpening() -->
+                <div class="p-2 flex-fill bd-highlight">
+                    <form id="" action="{{ url_for('sharpening') }}" method="POST" enctype="multipart/form-data">
+                        <button type="submit" class="btn btn-primary">Sharpening</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h2>Segmentation</h2>
+                <!-- Form untuk memanggil metode thresholding() -->
+                <div class="p-2 flex-fill bd-highlight">
+                    <form id="" action="{{ url_for('thresholding') }}" method="POST" enctype="multipart/form-data">
+                        <table class="table table-sm">
+                            <thead>
+                                <tr>
+                                    <th>Batas Bawah</th>
+                                    <th>Batas Atas</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="number" name="lower_thres" placeholder="0-255"></td>
+                                    <td><input type="number" name="upper_thres" placeholder="0-255"></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3"><button type="submit" class="btn btn-primary">Thresholding</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+            </div>
+            <!-- Form untuk memanggil metode binary() -->
+            <div class="col-md-4">
+                <h2>Citra Biner</h2>
+                <div class="p-2 flex-fill bd-highlight">
+                    <form id="" action="{{ url_for('binary') }}" method="POST" enctype="multipart/form-data">
+                        <table class="table table-sm">
+                            <thead>
+                                <tr>
+                                    <th>Nilai Ambang</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="number" name="threshold_value" placeholder="0-255"></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3"><button type="submit" class="btn btn-primary">Citra Biner</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h2>Operasi Morfologi</h2>
+                <div class="p-2 flex-fill bd-highlight">
+                    <form id="" action="{{ url_for('dilation') }}" method="POST" enctype="multipart/form-data">
+                        <button type="submit" class="btn btn-primary">Dilasi</button>
+                    </form>
+                </div>
+                <div class="p-2 flex-fill bd-highlight">
+                    <form id="" action="{{ url_for('closing') }}" method="POST" enctype="multipart/form-data">
+                        <button type="submit" class="btn btn-primary">Closing</button>
+                    </form>
+                </div>
+                <div class="p-2 flex-fill bd-highlight">
+                    <form id="" action="{{ url_for('erosion') }}" method="POST" enctype="multipart/form-data">
+                        <button type="submit" class="btn btn-primary">Erosi</button>
+                    </form>
+                </div>
+                <div class="p-2 flex-fill bd-highlight">
+                    <form id="" action="{{ url_for('opening') }}" method="POST" enctype="multipart/form-data">
+                        <button type="submit" class="btn btn-primary">Opening</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    ...
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h3>Jumlah Objek: {{ count }}</h3>
+            <form id="count_objects_form" action="{{ url_for('count_objects') }}" method="POST" enctype="multipart/form-data">
+                <button type="submit" class="btn btn-primary">Hitung Objek</button>
+            </form>
+        </div>
+    </div>
+</div>
+...
+
+    <!-- Menampilkan gambar hasil -->
+    <div class="container-fluid">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h3>After</h3>
+                        <img class="img-fluid" src="{{ url_for('static', filename=file_path) }}" alt="image here">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+</style>
+{% endblock %}
